@@ -18,7 +18,27 @@
     "@typescript-eslint/no-empty-interface": "off",
     "import/no-unresolved": "off",
     "react/no-unescaped-entities": "off",
-    "prettier/prettier": [],
-    "import/order": []
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external"],
+          ["internal", "parent", "sibling", "index"],
+          ["object"],
+          ["type"]
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   }
 }
